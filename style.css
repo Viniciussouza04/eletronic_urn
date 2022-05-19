@@ -9,6 +9,8 @@ body{
     align-items: center;
 }
 
+/* >>>> */
+
 .box-urn{
     background-color: var(--color-box-urn);
     padding: 30px;
@@ -20,7 +22,11 @@ body{
     height: 320px;
     background: linear-gradient(to right, #e8e8e8, #c1c1c1);
     border: 2px solid #777;
+    display: flex;
+    flex-direction: column;
 }
+
+/* >>>> */
 
 .keyboard{
     background-color: #403a3a;
@@ -48,6 +54,8 @@ body{
     box-shadow: 2px 2px 0px #555;
 }
 
+/* >>>> */
+
 .btn-white{
     background-color: white;
     color: #000;
@@ -69,4 +77,27 @@ body{
     width: 90px;
     height: 45px;
 }
+
+/* >>>> */
+
+.d-1{
+    flex: 1;
+    display: flex;
+}
+.d-1-left{
+    flex: 1;
+}
+.d-1-right{
+    width: 90px;
+}
+
+.d-2{
+    height: 50px;
+    font-size: 15px;
+    border-top: 2px solid #000;
+    padding-top: 5px;
+    padding-left: 13px;
+    padding-bottom: 5px;
+}
+
 
