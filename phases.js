@@ -1,10 +1,10 @@
 let phases = [
     {
-        title: 'LINGUAGENS',
+        title: 'MELHOR LINGUAGEM',
         numbers: 2,
         competitors: [
             {
-                number: 28,
+                number: '28',
                 name: 'Java',
                 creator: 'James Gosling',
                 creation: 1991,
@@ -13,16 +13,16 @@ let phases = [
                 ]
             },
             {
-                number: 30,
+                number: '30',
                 name: 'JavaScript',
                 creator: 'Brendan Eich',
                 creation: 1995,
                 img:[
-                    {url: 'javaScript_logo.jpg', legend:'javaScript'} 
+                    {url: 'javaScript_logo.png', legend:'javaScript'} 
                 ]
             },
             {
-                number: 35,
+                number: '35',
                 name: 'Python',
                 creator: 'Guido van Rossum',
                 creation: 1991,
@@ -31,7 +31,7 @@ let phases = [
                 ]
             },
             {
-                number: 40,
+                number: '40',
                 name: 'C Sharp',
                 creator: 'Anders Hejlsberg',
                 creation: 2000,

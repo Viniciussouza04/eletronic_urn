@@ -9,11 +9,14 @@ let numbers = document.querySelector('.d-1-3');
 
 
 let currentStage = 0;
-let number = '';
+let numberTyped = '';
+let white = false;
 
 function startStage(){
     let numbersHTML = '';
     let stage = phases[currentStage];
+    numberTyped = '';
+    white = false;
 
     for(let i = 0; i<stage.numbers; i++){
         if(i === 0){
@@ -33,7 +36,36 @@ function startStage(){
 }
 
 function updateInterface(){
-    alert('FINALIZOU O VOTO')
+    let stage = phases[currentStage];
+    let candidate = stage.competitors.filter((item)=>{
+        if(item.number === numberTyped){
+            return true;
+        }else{
+            return false;
+        }
+    });
+
+    if(candidate.length > 0){
+
+        candidate = candidate[0];
+        yourVote.style.display = 'block';
+        description.innerHTML = `Nome: ${candidate.name}<br/>Criador: ${candidate.creator}<br/>Criação: ${candidate.creation}`;
+        warning.style.display = 'block';
+
+        let imgHTML = '';
+        for(let i in candidate.img){
+            imgHTML += `<div class="d-1-imgs"> <img src="img/${candidate.img[i].url}" alt=""></div>`;
+        }
+        side.innerHTML = imgHTML;
+    } else {
+        yourVote.style.display = 'block';
+        warning.style.display = 'block';
+        description.innerHTML = `<div class="big-warning blink">VOTO NULO<div>`;
+    }
+
+    console.log('Candidato ', candidate);
+
+
 }
 
 
@@ -41,7 +73,7 @@ function clicked(n){
     let elNumber = document.querySelector('.numbers-vote.blink');
     if(elNumber != null){
         elNumber.innerHTML = n;
-        number = `${number}${n}`;
+        numberTyped = `${numberTyped}${n}`;
 
         elNumber.classList.remove('blink');
         if(elNumber.nextElementSibling !== null){
@@ -54,15 +86,38 @@ function clicked(n){
 }
 
 function btnWhite(){
-    alert('Cliclou jovem no BRANCO');
+    numberTyped = '';
+    white = true;
+
+    yourVote.style.display = 'block';
+    warning.style.display = 'block';
+    numbers.innerHTML = '';
+    description.innerHTML = `<div class="big-warning blink modeColor">VOTO EM BRANCO<div>`;
+    side.innerHTML = '';
 }
 
 function btnCorrect(){
-    alert('Cliclou jovem no CORRIGE');
+    startStage();
 }
 
 function btnConfrim() {
-    alert('Cliclou jovem no CONFRIMA');
+    let stage = phases[currentStage];
+
+    let confirmedVote = false;
+    
+    if(white === true){
+        confirmedVote = true;
+        console.log('Confirmando como BRANCO...');
+    }else if(numberTyped.length === stage.numbers){
+        confirmedVote = true;
+        console.log('Confirmando como '+ numberTyped);
+    }
+
+    if(confirmedVote){
+        currentStage++;
+        document.querySelector('.screen').innerHTML = `<div class="veryBig-warning blink modeColor">FIM<div>`;
+    }
+    
 }
 
 startStage();
