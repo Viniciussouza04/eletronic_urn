@@ -173,11 +173,12 @@ body{
 .modeColor{
     color: #000;
 }
-.veryBig-warning{
+.control-finish{
     font-size: 70px;
     font-weight: bold;
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

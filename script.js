@@ -6,7 +6,7 @@ let description = document.querySelector('.d-1-4');
 let warning = document.querySelector('.d-2');
 let side = document.querySelector('.d-1-right');
 let numbers = document.querySelector('.d-1-3');
-
+let btnRestart = document.querySelector('.btn-restart'); // TERMINAR *****
 
 let currentStage = 0;
 let numberTyped = '';
@@ -115,9 +115,10 @@ function btnConfrim() {
 
     if(confirmedVote){
         currentStage++;
-        document.querySelector('.screen').innerHTML = `<div class="veryBig-warning blink modeColor">FIM<div>`;
+        document.querySelector('.screen').innerHTML = `<div class="control-finish blink modeColor">FIM</div>`;
     }
-    
 }
 
 startStage();
+
+
