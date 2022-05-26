@@ -1,6 +1,6 @@
 let phases = [
     {
-        title: 'MELHOR LINGUAGEM',
+        title: 'MELHOR LINGUAGEM DE PROGRAMAÇÃO',
         numbers: 2,
         competitors: [
             {

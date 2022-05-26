@@ -6,7 +6,6 @@ let description = document.querySelector('.d-1-4');
 let warning = document.querySelector('.d-2');
 let side = document.querySelector('.d-1-right');
 let numbers = document.querySelector('.d-1-3');
-let btnRestart = document.querySelector('.btn-restart'); // TERMINAR *****
 
 let currentStage = 0;
 let numberTyped = '';
@@ -51,6 +50,7 @@ function updateInterface(){
         yourVote.style.display = 'block';
         description.innerHTML = `Nome: ${candidate.name}<br/>Criador: ${candidate.creator}<br/>Criação: ${candidate.creation}`;
         warning.style.display = 'block';
+        
 
         let imgHTML = '';
         for(let i in candidate.img){
@@ -117,8 +117,7 @@ function btnConfrim() {
         currentStage++;
         document.querySelector('.screen').innerHTML = `<div class="control-finish blink modeColor">FIM</div>`;
     }
+
 }
 
 startStage();
-
-
