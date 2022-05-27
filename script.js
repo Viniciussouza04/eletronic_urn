@@ -6,6 +6,7 @@ let description = document.querySelector('.d-1-4');
 let warning = document.querySelector('.d-2');
 let side = document.querySelector('.d-1-right');
 let numbers = document.querySelector('.d-1-3');
+let observation = document.querySelector('.observation');
 
 let currentStage = 0;
 let numberTyped = '';
@@ -32,6 +33,7 @@ function startStage(){
     warning.style.display = 'none';
     side.innerHTML = '';
     numbers.innerHTML = numbersHTML;
+    observation.style.display = 'none';
 }
 
 function updateInterface(){
@@ -102,6 +104,7 @@ function btnCorrect(){
 
 function btnConfrim() {
     let stage = phases[currentStage];
+    observation.style.display = 'block';
 
     let confirmedVote = false;
     

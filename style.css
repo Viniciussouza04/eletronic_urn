@@ -72,10 +72,9 @@ body{
 /* >>>> */
 
 .btn-white{
-    background-color: white;
+    background-color: #fff;
     color: #000;
     font-size: 15px;
-
 }
 
 .btn-red{
@@ -91,6 +90,27 @@ body{
     font-size: 15px;
     width: 90px;
     height: 45px;
+}
+
+.keyboard-botton.bar-btn1:hover{
+    background-color: #fff;
+    transition: 0.2s;
+    color: #000;
+    box-shadow: 2px 2px 2px rgba(24, 23, 23, 0.865);
+}
+
+.keyboard-botton.bar-btn2:hover{
+    background-color: #ca551a;
+    transition: 0.2s;
+    color: #fff;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.865);
+}
+
+.keyboard-botton.bar-btn3:hover{
+    background-color: #3a9575;
+    transition: 0.2s;
+    color: #fff;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.865);
 }
 
 /* >>>> */
@@ -127,6 +147,7 @@ body{
     display: flex;
     height: 50px;
 }
+
 .numbers-vote{
     display: inline-block;
     width: 30px;
@@ -135,14 +156,12 @@ body{
     text-align: center;
     line-height: 40px;
     font-size: 23px;
-
 }
 
 .blink{
     animation-name: blink;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
-
 }
 
 .d-1-4{
@@ -172,19 +191,10 @@ body{
     padding-bottom: 5px;
 }
 
-/* JS */
-.big-warning{
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(250, 8, 8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-}
 .modeColor{
     color: #000;
 }
+
 .control-finish{
     font-size: 70px;
     font-weight: bold;
@@ -195,9 +205,48 @@ body{
     align-items: center;
 }
 
+/* >>>> */
+
 .listVote{
-    margin-top: 40px;
+    width: 380px;
+    margin-bottom: 35px;
+    margin-top: 5px;
     line-height: 30px;
-    border: 1px solid #000;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 2px#716f6f;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icones{
+    font-size: 30px;
+    display: flex;
+    margin-bottom: 15px;
+    margin-top: 3px;
+}
+
+.fa-dtn{
+    padding-right: 20px;
+}
+
+.title-vote{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.observation{
+    color: #ff0000;
+    font-size: 23px;
+}
+
+/* JS */
+.big-warning{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(250, 8, 8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
